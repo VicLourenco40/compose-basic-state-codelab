@@ -1,6 +1,5 @@
 package com.viclourenco.basicstatecodelab
 
-import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
@@ -15,9 +14,8 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun WaterCounter(modifier: Modifier = Modifier) {
-    var count by remember { mutableStateOf(0) }
-
     Column(modifier = modifier.padding(16.dp)) {
+        var count by remember { mutableStateOf(0) }
         if (count > 0) {
             Text("You've had $count glasses.")
         }
